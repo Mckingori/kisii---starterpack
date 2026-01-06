@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <button>Hello</button>
+    <button class="Js-button">Second button</button>
+    <script>
+     /* document.body.innerHTML = 'Hello';//changing what in the html document
+      document.title = 'Good job';//used to change the title
+      document.body //used to put the body of html in Js*/
+      console.log(document.querySelector('button').innerHTML);//Lets us to get any element from the html and put it in Js
+     
+      document.title = 'document object model';document.querySelector('.Js-button')
+    const buttonElement = document.querySelector('.Js-button')
+    console.log(buttonElement)
+    </script>
+</body>
+</html>   

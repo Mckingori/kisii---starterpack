@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions🪶🪶</title>
+</head>
+<body>
+    <button onclick="greet('Michael');">Js</button>
+    <button onclick="greet()">Java</button>
+    <script>//Functions help us r-use the code comaes in handy when using the same code again 
+   // returns used to return values whenever the function is called 
+   //Parameters used to put values in functions like opposite of return 
+       /* function calculateTax(parameter1, taxparcent = 0.1){
+            console.log( parameter1 * taxparcent)
+        }// parameters can be more than one
+        calculateTax(2000, 0.2);
+        calculateTax(5000);
+        function greet(name = 'Hello there '){
+         
+            console.log(`Hello ${name}!`);
+        }
+        const product = {
+            name: 'pallazo',
+            price: 700,
+        };
+        console.log(product);
+        const object1 = {
+            messg: 0, 
+        }
+        let oni = object1;
+        console.log(oni)*/
+        const basketProduct = {
+            name: 'Basketball',
+            price: 2095,
+}
+basketProduct.price += 500;
+
+console.log(basketProduct)
+const biscuits = {
+    name: 'Basketball',
+    price: 2595,
+    
+};
+console.log(biscuits);
+
+function comparePrice() {
+    if (basketProduct.price > biscuits.price) {
+        console.log( biscuits.name,'are less expensive');
+    } 
+    
+}
+comparePrice();
+const   kiko = {
+    name: 'oops',
+    Price: 5678,
+}
+const kioo = kiko;
+function isSameProduct(){
+    console.log(kiko === kioo? true: false)
+
+    
+}
+isSameProduct();
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin flip🪙</title>
+</head>
+<body>
+    <h1>Welcome to the game🐊</h1>
+   <p> Rules are if the computer guesses what side of the coin you clicked you lose if it fails you win</p>
+   <button onclick="
+ thegame('Heads')
+   ">Heads</button>
+   <button onclick="
+   thegame('Tails');
+   ">Tails</button>
+   <button onclick="
+   score = {
+    wins: 0,
+    loss: 0,
+   }
+   localStorage.removeItem('score')
+   alert('You have reset the game')
+   ">Reset Scores</button>
+   <script>
+let score = JSON.parse(localStorage.getItem('score')) || {
+  wins: 0,
+  loss: 0,
+}
+
+    function thegame(decider){
+         const result = pickcompmove();
+  let matokeo = '';
+  if (decider === 'Heads'){
+     if (result === 'Heads'){
+    matokeo = 'You lose';
+   } else if (result === 'Tails' ){
+    matokeo = 'You win🥂';
+   } else if (decider === 'Tails'){
+     if (result === 'Heads'){
+    matokeo = 'You win🥂';
+   } else if (result === 'Tails' ){
+    matokeo = 'You lose';
+   }
+   }
+  }
+ if (matokeo === 'You win🥂'){
+    score.Wins += 1;
+  } else if (matokeo === 'You lose'){
+    score.loss += 1;
+  }
+localStorage.setItem('score', JSON.stringify(score));
+   alert(`you picked ${decider}. the computer pickes ${result}. ${matokeo}.
+ wins are ${score.wins}. losses are ${score.losses}`)
+    }
+   
+    function pickcompmove(){
+        const compGuess = Math.random();
+        let result = '';
+
+                    if (compGuess >= 0 && compGuess <1/2){
+                result = 'Heads';
+            } else if (compGuess >= 1/2 && compGuess < 1){
+                result = 'Tails';
+            }
+   return result;
+    }
+   </script>
+</body>
+</html>

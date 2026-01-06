@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const product2 = {
+            name: 'shirt',
+            ['delivery-time']: 'a day',
+            rating: {//an object within an object
+                stars: 4.5,
+                count: 87,
+            },
+            fun: function function1(){
+                console.log("a function in an object");
+            }
+        }
+        console.log(product2);
+        console.log(product2.name);//getting value from an object using the dot notation
+        console.log(product2['name']);//getting through a bracket notation
+        console.log(product2['delivery-time']);//bracket notation are used when a dot notation is useless ie when dealing with special type of properties(have a structure that is different like here)
+        console.log(product2.rating.count);//gettig a property of an object within an object
+        product2.fun();
+        console.log(typeof console.log);
+       console.log (JSON.stringify(product2));//converting a js object into json
+       const jsonstring = JSON.stringify(product2);
+     console.log (  JSON.parse(jsonstring));//used for turning the Json to js object
+    </script>
+</body>
+</html>
